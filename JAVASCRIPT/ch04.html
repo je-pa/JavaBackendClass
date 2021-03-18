@@ -7,8 +7,15 @@
 
     console.log(a + a);//20 정수 
     console.log(b + b);//1010
-    console.log(a + b);//1010
+    console.log(a + parseInt(b));//1010
+    console.log(a + Number(b));
     console.log(a + a + b);//2010
     console.log(b + a + a);//101010
     console.log(a + b + a);//101010
+    console.log(5-'h');
+
+    var c = '123a456';
+    console.log(parseInt(c));//123
+    console.log(Number(c)); //NaN
+    
 </script>
