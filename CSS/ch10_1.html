@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls1{
+            /*position: static;*/ /*static은 top left가 안먹힌다!!*/
+            position: relative; /*자기기준 자기위에 20마진줄거야!*/
+            background-color: crimson;
+            height: 300px;
+            width: 300px;
+            left: 100px;
+            top: 20px;
+        }
+        .cls2{
+            position: absolute;/*부모기준 오른쪽 10px떨어짐
+                                relativ는 부모가 될수 있다.
+                                static은 될수 없어 body가 기준*/
+            background-color: cyan;
+            height: 100px;
+            width: 100px;
+            left: 20px;
+            bottom: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "cls1">
+        <div class="cls2"></div>
+    </div>
+</body>
+</html>

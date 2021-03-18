@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <!--input에는 value라는 속성이 있다 aaa는 있긴하지만 반응을 안함 무시-->
+    <!--input에 안녕하세요가 들어있는데 그뒤에 적으면 
+        value에 계속 추가되어만들어 지고있다구 한다-->
+        <!-- 요것이 객체라고 한다..-->
+        <!--html에서 만들어지는 것들이 element div,input,-->
+    
+    <script>
+        var txtElem = document.getElementById('txt'); //객체 주소값이 들어옴
+        console.log(txtElem.value);
+        console.log('dgadfad'); //개발자가 프로그램이 잘 돌아가는지 확인하기위해 사용
+        txtElem.value = 'Hello\'ssss';//주로 html은 "" 자바스크립트는 ''많이 씀
+        //쌍따움표 하고 싶으면 '' 아니면 \ 반대로도 적용
+// 
+        var txtElem2 = document.getElementById('txt');
+        console.log(txtElem2.value);
+
+        alert('안녕하세요');
+    </script>
+</body>
+</html>

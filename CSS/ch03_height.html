@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 1000px;
+        }
+        .parent{
+            background-color: aqua;
+            height: 50%; /*body가 height값을 줘야 사용가능*/
+            width:60%; /*body의 60퍼센트*/
+            max-width: 300px;
+            min-width: 500px;
+        }
+
+        .child{
+            background-color: blue;
+            height: 80%;/*400의 80%*/
+            width: 50%;/*400px의 50%*/
+        }
+        .right.left{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <span class="right left" id="pk">ddddd</span>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        #parent{
+            display: flex;
+        }
+        #container{
+            flex-grow: 1;
+            background-color: pink;
+            height: 200px;
+            display: flex; /*방향*/
+
+            /*방향 설정*/
+            /*flex-direction: row;/*기본값_왼쪽에서 오른쪽 수직방향*/
+            /*flex-direction: row-reverse;/*오른쪽에서 왼 수직방향*/
+            /*flex-direction: column;/*위에서 아래 수직방향*/
+            /*flex-direction: column-reverse;/*아래에서 위 수직방향*/
+            
+            /*정방향 컨트롤 */
+            /*justify-content: flex-end;/*끝으로 가라 (기본값은 flex-start)*/
+            /*justify-content: center;/*중간으로 가라*/
+            /*justify-content: space-around;/*세로방향으로 똑같은 비율로 공간차지*/
+            /*justify-content: space-between;/*똑같이 나누되 젤 끝에까지 붙인다?*/
+            justify-content: space-evenly;/*세로방향으로 아래위 똑같은 비율로 띄어짐*/
+            
+            /*수직방향 컨트롤*/
+            /*align-items:center;/*가로기준 중앙으로*/
+            align-items: flex-end;/*가로기준 끝으로*/
+
+            
+            
+        }
+
+        #container2{
+            display: flex;
+            flex-grow: 1; /*부모가 flex라서 먹힘*/
+            background-color: royalblue;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="container">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>C</div>
+        </div>
+        <div id="container2">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>C</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td ,th{ 
+            border-collapse:collapse;
+            border : 1px solid black; 
+        } 
+    </style><!--추가됨-->
+</head> 
+<body>
+    <table>
+        <thead>
+            <tr><!--한 줄-->
+                <th>번호</th><!--첫 번째 칸-->
+                <th>제목</th><!--굵어짐-->
+                <th>작성일</th> 
+            </tr>
+        </thead>
+        <tbody> <!--t헤드랑 t바디랑은 다른그룹이다-->
+            <tr>
+                <td rowspan="2">1</td>
+                <td>안녕하세요</td>
+                <td>2020.01.02</td>
+            </tr>
+            <tr>
+                <td colspan="2">Hello</td>
+                <!--<td>Hello</td>
+                <td>2020.01.03</td>-->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
