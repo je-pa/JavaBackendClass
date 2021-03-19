@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="주소값" method="어떤방식으로 날아갈지">
+            <div><label>아이디<input type="text" id="txtId"></label></div>
+            <div><label>비밀번호<input type="password" id="txtPw"></label></div>
+            <!--아이디 까지 레이블로 묶어줌-->
+
+            <div>
+                성별 : 
+                <label>여성<input type="radio" name="gender" checked></label>
+                <label>남성<input type="radio" name="gender"></label>
+                <!--name이 같기 때문에 묶여서 둘중 하나 선택이 가능!-->
+                외계인<input type="radio" name="no">
+
+            </div>
+            <div>
+                <input type="reset" value="초기화">
+                <input type="submit" value="전송">
+                <button>전송</button>
+            </div>
+            <a href="join.html"><input type="button" value="join"></a>
+            <!--<a href="join.html"><button>join</button></a>-->
+            <!--submit쓰면 뭐 날아가고 button하면 form으로 안날아감??-->
+            <!--버튼테그 사용금지 -->
+            <!--button을 사용해야..트리거 안됨...? -->
+            <!--input type이 button 사용해야..트리거 안됨...? -->
+            <input type="button" value="login" onclick="clkLogin()">
+            <!--바인딩 함수를 연결했다.-->
+            
+        </form>
+    </div>
+    <script>
+        /*
+        function clkLogin(){ 
+            var txtIdElem = document.getElementById('txtId');
+            console.log(txtIdElem.value);
+            if(txtIdElem.value ===''){
+                alert('로그인을 할 수 없습니다.')
+            }
+        } //하나라도 있으면 어딘가로 이동
+        */
+       
+    </script>
+</body>
+</html>
