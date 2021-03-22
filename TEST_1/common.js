@@ -12,27 +12,24 @@ function clkLogin(){
     if(txtPwElem.value ===''){
         alert('로그인을 할 수 없습니다.');
         return;
-    } 
+    }
     location.href = 'main.html';
 }
 
 function clkJoin(){
     var txtIdElem = document.getElementById('txtId');
-    console.log(txtIdElem.value);
     if(txtIdElem.value ===''){
         alert('회원가입을 할 수 없습니다.');
         return;
     }
 
-    var txtPwElem = document.getElementById('pw1');
-    console.log(txtPwElem.value);
+    var txtPwElem = document.getElementById('txtPw');
     if(txtPwElem.value ===''){
         alert('회원가입을 할 수 없습니다.');
         return;
     }
 
-    var txtPwElem2 = document.getElementById('pw2');
-    console.log(txtPwElem2.value);
+    var txtPwElem2 = document.getElementById('txtPw2');
     if(txtPwElem2.value ===''){
         alert('회원가입을 할 수 없습니다.');
         return;

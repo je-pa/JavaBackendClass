@@ -4,73 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Lorem Ipsum</title>
+    <title>Document</title>
     <style>
         html, body{
-            padding: 0; 
-            margin: 0;
+            padding:0;
+            margin:0;
             height: 100%;
-        }
-        #container{
-            display: flex;
-            flex-direction: column;
-            height:100%;
         }
         *{
             box-sizing: border-box;
-            padding:0; margin:0;
         }
-        
-        table, td , th{
-            border-collapse:collapse;
-            border : 1px solid black;
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-        
-        /*
-        body{
-            overflow: auto;
-        } /*700을 벗어나면 스크롤 생기고 아니면 안생기고?*/
-
         .header{
             background-color: #1abc9c;
-            width: 100%;
             height: 120px; /*header 새로 크기 120px 크기 고정*/
             line-height: 120px;
         }
-        .section{ 
-            /*height: 1000px; /*일단 해놨음*/
-            
-            flex-grow:1;
-            overflow: auto;
-        }
         .footer{
-            /*display: flex;*/
-            background-color: #3496db;
-            width: 100%;
-            height: 100px; /*footer 새로 크기 100px 크기 고정*/
-            /*left: 100px;*/
+            
+            height: 100px;
+            background-color: #3498db;
             text-align: center;
-            /*padding: 50px;*/
-            /*text-align: center center;*/
-            /*color: blue;*/
             line-height: 100px;
         }
-        #cat{
-            float: right;
+        .section{
+            flex-grow: 1;
+            overflow-y: auto;
         }
-       
+        
         .table1{
             display: flex;
             justify-content: center;
         }
 
+        table, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #cat{
+            float: right;
+        }
+
     </style>
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <div class="header">Exam1</div>
         <div class="section">
-
             <div>
                 <a href="http://www.google.com/"target="_blank">
                     <img id="cat" src="../cat4.jpg" title="고양이">
@@ -86,34 +70,30 @@
                 <div>Where can I get some?</div>
                 <div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</div>
             </div>
-            
             <div class="table1">
                 <table>
-                    <tr><!--한 줄-->
-                        <th>First</th><!--첫 번째 칸 -->
-                        <th>Lastname</th> <!--세로-->
+                    <tr>
+                        <th>Fistname</th>
+                        <th>Lastname</th>
                         <th>Age</th>
                     </tr>
                     <tr>
-                        <td colspan="2">jill Smith</td>
+                        <td colspan="2">Jill Smith</td>
                         <td>50</td>
                     </tr>
                     <tr>
-                        <td>Eve</td>  <!--가로-->
-                        <td >Jackson</td>
+                        <td>Eve</td>
+                        <td>Jackson</td>
                         <td rowspan="2">94</td>
                     </tr>
                     <tr>
-                        <td>Thomas</td>  <!--가로-->
+                        <td>Thomas</td>
                         <td>Jackson</td>
                     </tr>
                 </table>
-            </div>  
+            </div>
         </div>
-
-        <div class="footer">
-            코리아IT아카데미
-        </div>
+        <div class="footer"> 코리아IT아카데미  </div>
     </div>
 </body>
 </html>
