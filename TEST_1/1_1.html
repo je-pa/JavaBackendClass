@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html, body{
+        html, body{/*뷰포트에 맞추겠다*/
             padding:0;
             margin:0;
-            height: 100%;
+            height: 100%; /*지정하지않으면 자식들이 필요한 만큼만 늘어남*/
         }
         *{
-            box-sizing: border-box;
+            box-sizing: border-box; /*width, border 둘다 주면 둘다 고려해줘야하지만
+            이걸 적용시 크기가 width에 맞춰져서 계산이 편리해진다*/
         }
         .container{
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: 100%;/*자식은 부모의 크기를 넘어가지 않는다 부모의 100%*/
         }
         .header{
             background-color: #1abc9c;
@@ -30,9 +31,13 @@
             background-color: #3498db;
             text-align: center;
             line-height: 100px;
+            /*display:flex;
+            justify-content: center;
+            align-content: center;*/
+            /*justify-self: 자신이 어디로 가고싶을때;*/
         }
         .section{
-            flex-grow: 1;
+            flex-grow: 1; /*안해주면 자식필요한 만큼만 늘어날것 자식*/
             overflow-y: auto;
         }
         
