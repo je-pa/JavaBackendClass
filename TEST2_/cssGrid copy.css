@@ -6,8 +6,10 @@ body {
   background-color: darkgreen;
   width: 30%;
   display: grid;
-  grid-template-rows: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(33%, auto));
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 50px 900px;
+
+  grid-auto-rows: 100px; /*통제에서 벗어난 친구들을 통제*/
 }
 
 .item {

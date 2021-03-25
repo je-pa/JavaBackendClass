@@ -1,0 +1,65 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0px;
+}
+footer {
+  position: fixed; /*고정하는거 알아내기*/
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+a {
+  border-radius: 0.25rem; /*round!!*/
+  padding: 0.5rem;
+  transition: all 0.3s; /*0.3초 걸려서 hover 지정한대로 스무스하게 바껴라*/
+}
+
+a:hover {
+  opacity: 0.6; /*투명도*/
+}
+
+.breweries {
+  padding: 2rem; /*안줘도 됨. 그냥  보기편하게*/
+}
+
+.breweries > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.breweries > ul > li {
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+}
+
+.breweries > ul > li > figure {
+  overflow: hidden; /*부모 넘어가면 짤림*/
+  position: relative; /*자기기준*/
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  max-height: 220px;
+}
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute; /*부모기준?*/
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /*알파값?*/
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
