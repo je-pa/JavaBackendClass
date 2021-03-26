@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*링크를 눌렀을때 부드럽게 위치로 간다.*/
 }
 html,
 body {
@@ -10,11 +10,11 @@ body {
   /*weidth, height 안줌///////////////////////////*/
 }
 footer {
-  position: fixed; /*고정하는거 알아내기*/
+  position: fixed; /*고정하는거 알아내기 사이트 보기*/
   bottom: 0;
   background-color: #333;
   color: #fff;
-  padding: 0.75rem;
+  padding: 0.75rem; /*12px*/
   width: 100%;
   text-align: center;
 }
@@ -24,11 +24,15 @@ a {
   color: whitesmoke;
   background-color: goldenrod;
   border-radius: 0.25rem; /*round!!*/
-  transition: all 0.3s; /*0.3초 걸려서 hover 지정한대로 스무스하게 바껴라*/
+  transition: all 0.3s;
+  /*0.3초 걸려서 hover 지정한대로 스무스하게 바껴라
+    동적인것에 적용 */
   display: inline-block;
+  /*inline에서는 불가능한 width, height, 마진,패딩 지정가능해짐*/
 }
 
 a:hover {
+  /*링크에 마우스 포인터를 올려 놓았을때*/
   opacity: 0.6; /*투명도*/
 }
 ul {
@@ -37,7 +41,7 @@ ul {
   list-style: none;
   /*list-style: none; 차이 /////////////////**/
 }
-
+/*---------------------------------------------중간점검*/
 .breweries {
   padding: 2rem; /*안줘도 됨. 그냥  보기편하게*/
   padding-bottom: 76px; /*밑에 안가리게 함*/
@@ -52,16 +56,17 @@ ul {
 }
 
 .breweries > ul > li {
-  position: relative; /*이까지만하면 달라지는거 없*/
+  position: relative; /*이까지만하면 달라지는거 없... 어 잘 모르겠따......*/
+  /*z-index: 1;*/
   border: 1px solid gainsboro;
-  border-radius: 0.5rem;
-  padding-bottom: 2.8rem;
+  border-radius: 0.5rem; /*둥글게*/
+  padding-bottom: 2.8rem; /*버튼이랑 안겹치게 띄어줌*/
   /*padding-bottom:2.8rem;차이//////////////////////*/
 }
 
 .breweries > ul > li > figure {
   overflow: hidden; /*부모 넘어가면 짤림*/
-  position: relative; /*자기기준*/
+  position: relative; /*자기기준- 부모한테 먹이는것*/
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   max-height: 220px; /*굳이 필요는없지만 이상해질거 같다궁ㅇ*/
@@ -72,7 +77,9 @@ ul {
 }
 
 .breweries > ul > li > figure > figcaption {
-  position: absolute; /*부모기준?*/
+  position: absolute;
+  /*static 속성을 가지고 있지 않은 부모를 기준으로 움직임
+    만약 부모에 static밖에 없으면 body가 기준*/
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7); /*알파값?*/
   width: 100%;
@@ -92,7 +99,7 @@ ul {
 
   display: -webkit-box;
   word-wrap: break-word;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 3; /*n줄이 넘어가면 ... 붙여줌*/
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
